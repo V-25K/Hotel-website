@@ -12,7 +12,7 @@
   </head>
   <body class="bg-gray-100">
     <!-- Header -->
-    <header class="bg-white shadow fixed top-0 right-0 w-full">
+    <header class="bg-white shadow fixed top-0 right-0 w-full z-10">
       <div
         class="container mx-auto px-4 py-4 flex justify-between items-center"
       >
@@ -43,7 +43,7 @@
     </header>
 
     <!-- Main Section -->
-    <main id="home">
+    <main id="home" class="pt-16">
       <!-- Hero Section -->
       <section
         class="bg-cover bg-center h-96"
@@ -63,58 +63,60 @@
 
       <!-- Booking Form -->
       <section class="py-8 bg-gray-200">
-        <form id="search-form"> 
-        <div class="container mx-auto px-4">
-          <div
-            class="bg-white p-6 rounded shadow-md flex flex-wrap space-y-4 space-x-0 md:space-x-4 md:space-y-0 items-center justify-between"
-          >
-            <div class="flex flex-col w-full md:w-1/5">
-              <label for="from-date" class="text-gray-600 text-center"
-                >From Date</label
-              >
-              <input
-                type="date"
-                id="from-date"
-                class="border border-gray-300 rounded px-4 py-2"
-              />
-            </div>
-            <div class="flex flex-col w-full md:w-1/5 text-center">
-              <label for="to-date" class="text-gray-600">To Date</label>
-              <input
-                type="date"
-                id="to-date"
-                class="border border-gray-300 rounded px-4 py-2"
-              />
-            </div>
-            <div class="flex flex-col w-full md:w-1/5">
-              <label for="rooms" class="text-gray-600 text-center">Rooms</label>
-              <input
-                type="number"
-                id="rooms"
-                placeholder="Rooms"
-                class="border border-gray-300 rounded px-4 py-2"
-              />
-            </div>
-            <div class="flex flex-col w-full md:w-1/5">
-              <label for="guests" class="text-gray-600 text-center"
-                >Guests</label
-              >
-              <input
-                type="number"
-                id="guests"
-                placeholder="Guests"
-                class="border border-gray-300 rounded px-4 py-2"
-              />
-            </div>
-            <button
-              class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 mt-6 md:mt-0"
-              id="search"
-              type="submit"
+        <form id="search-form">
+          <div class="container mx-auto px-4">
+            <div
+              class="bg-white p-6 rounded shadow-md flex flex-wrap space-y-4 space-x-0 md:space-x-4 md:space-y-0 items-center justify-between"
             >
-              Search
-            </button>
+              <div class="flex flex-col w-full md:w-1/5">
+                <label for="from-date" class="text-gray-600 text-center"
+                  >From Date</label
+                >
+                <input
+                  type="date"
+                  id="from-date"
+                  class="border border-gray-300 rounded px-4 py-2"
+                />
+              </div>
+              <div class="flex flex-col w-full md:w-1/5 text-center">
+                <label for="to-date" class="text-gray-600">To Date</label>
+                <input
+                  type="date"
+                  id="to-date"
+                  class="border border-gray-300 rounded px-4 py-2"
+                />
+              </div>
+              <div class="flex flex-col w-full md:w-1/5">
+                <label for="rooms" class="text-gray-600 text-center"
+                  >Rooms</label
+                >
+                <input
+                  type="number"
+                  id="rooms"
+                  placeholder="Rooms"
+                  class="border border-gray-300 rounded px-4 py-2"
+                />
+              </div>
+              <div class="flex flex-col w-full md:w-1/5">
+                <label for="guests" class="text-gray-600 text-center"
+                  >Guests</label
+                >
+                <input
+                  type="number"
+                  id="guests"
+                  placeholder="Guests"
+                  class="border border-gray-300 rounded px-4 py-2"
+                />
+              </div>
+              <button
+                class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 mt-6 md:mt-0"
+                id="search"
+                type="submit"
+              >
+                Search
+              </button>
+            </div>
           </div>
-        </div>
         </form>
       </section>
 
@@ -148,7 +150,9 @@
           </p>
         </div>
       </section>
+
       <br />
+
       <!-- Contact Section -->
       <section class="py-8 bg-gray-200" id="contact">
         <div class="container mx-auto px-4">
@@ -157,24 +161,93 @@
         </div>
       </section>
     </main>
-    
-    <!-- Hotel list container -->
+
     <main
       id="hotels-list-container"
-      class="bg-white p-8 rounded-lg shadow-lg w-full hidden"
+      class="bg-white p-8 rounded-lg shadow-lg w-full hidden flex pt-16"
     >
-      <h2 class="text-2xl font-bold text-center mb-4">Hotels List</h2>
-      <ul id="hotels-list" class="space-y-4"></ul>
-      <button
-        id="back-button"
-        class="w-1/6 bg-red-500 text-white p-2 rounded-md mt-4 ml-1/2"
+      <!-- Filter Section -->
+      <aside
+        class="w-1/4 h-screen p-4 border-r border-gray-300 fixed top-16 left-0"
       >
-        Back
-      </button>
+        <h2 class="text-xl font-bold mb-4">Filters</h2>
+        <div class="mb-4">
+          <label
+            for="filter-price"
+            class="block text-l font-medium text-gray-700 underline"
+            >Price</label
+          >
+          <input type="range" id="filter-price" min="500" max="20000">
+        </div>
+        <div class="mb-4">
+          <label
+            for="filter-rating"
+            class="block text-l font-medium text-gray-700 underline"
+            >Rating</label
+          >
+          <select
+            id="filter-rating"
+            class="mt-1 block w-full p-2 border border-gray-300 rounded-md"
+          >
+            <option value="all">All</option>
+            <option value="4">4+ stars</option>
+            <option value="3">3+ stars</option>
+            <option value="2">2+ stars</option>
+            <option value="1">1+ star</option>
+          </select>
+        </div>
+        <div class="mb-4">
+          <h2 class="block text-l font-bold text-gray-700 underline">
+            Accommodation Type
+          </h2>
+          <div class="mx-4 flex">
+            <label
+              for="Hotels"
+              class="block text-sm font-medium text-gray-700 w-2/3"
+              >Hotels</label
+            >
+            <input
+              id="Hotels"
+              type="radio"
+              class="mt-1 block w-full p-2 border border-gray-300 rounded-md"
+              name="accommodation"
+            />
+          </div>
+          <div class="mx-4 flex">
+            <label
+              for="homeStay"
+              class="block text-sm font-medium text-gray-700 w-2/3"
+              >Home stay</label
+            >
+            <input
+              id="homeStay"
+              type="radio"
+              class="mt-1 block w-full p-2 border border-gray-300 rounded-md"
+              name="accommodation"
+            />
+          </div>
+        </div>
+        <button
+          id="apply-filters"
+          class="w-full bg-blue-500 text-white p-2 rounded-md"
+        >
+          Apply Filters
+        </button>
+      </aside>
+      <!-- Hotels List -->
+      <div class="w-3/4 p-4 ml-auto overflow-y-auto">
+        <ul id="hotels-list" class="space-y-4"></ul>
+        <button
+          id="back-button"
+          class="w-1/6 bg-red-500 text-white p-2 rounded-md mt-4 mx-auto"
+        >
+          Back
+        </button>
+      </div>
     </main>
 
     <!-- Footer -->
-    <footer class="bg-white py-6">
+    <footer class="bg-white py-6 mt-8">
       <div class="container mx-auto px-4 text-center">
         <p class="text-gray-600">&copy; 2024 HotelName. All rights reserved.</p>
         <div class="mt-4 space-x-4">
