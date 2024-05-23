@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hotel Booking</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <script defer src="./hotels.js"></script>
+  </head>
+  <body class="bg-gray-100">
+    <!-- Header -->
+    <header class="bg-white shadow fixed top-0 right-0 w-full">
+      <div
+        class="container mx-auto px-4 py-4 flex justify-between items-center"
+      >
+        <div class="text-xl font-bold text-gray-800">HotelName</div>
+        <nav class="space-x-4">
+          <a
+            href="#home"
+            class="text-gray-600 hover:text-gray-800 hover:underline"
+            >Home</a
+          >
+          <a
+            href="#aboutUs"
+            class="text-gray-600 hover:text-gray-800 hover:underline"
+            >About Us</a
+          >
+          <a
+            href="#contact"
+            class="text-gray-600 hover:text-gray-800 hover:underline"
+            >Contact</a
+          >
+          <a
+            href="./loginAndSignup.html"
+            class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600"
+            >Login / Signup</a
+          >
+        </nav>
+      </div>
+    </header>
+
+    <!-- Main Section -->
+    <main id="home">
+      <!-- Hero Section -->
+      <section
+        class="bg-cover bg-center h-96"
+        style="
+          background-image: url('https://media.istockphoto.com/id/1255683167/photo/the-indian-flag-is-waving-in-the-sky-at-himalayan-mountain-range-in-satopanth-badrinath.webp?b=1&s=170667a&w=0&k=20&c=qqbew-kHO2MjKB8NzA8DFtp6pIbXagNdyg5-DCqx0Ug=');
+        "
+      >
+        <div
+          class="container mx-auto h-full flex flex-col justify-center items-center text-center text-white"
+        >
+          <h1 class="text-5xl font-bold mb-4">Welcome to HotelName</h1>
+          <p class="text-lg mb-8">
+            Experience luxury and comfort in the heart of the city.
+          </p>
+        </div>
+      </section>
+
+      <!-- Booking Form -->
+      <section class="py-8 bg-gray-200">
+        <form id="search-form"> 
+        <div class="container mx-auto px-4">
+          <div
+            class="bg-white p-6 rounded shadow-md flex flex-wrap space-y-4 space-x-0 md:space-x-4 md:space-y-0 items-center justify-between"
+          >
+            <div class="flex flex-col w-full md:w-1/5">
+              <label for="from-date" class="text-gray-600 text-center"
+                >From Date</label
+              >
+              <input
+                type="date"
+                id="from-date"
+                class="border border-gray-300 rounded px-4 py-2"
+              />
+            </div>
+            <div class="flex flex-col w-full md:w-1/5 text-center">
+              <label for="to-date" class="text-gray-600">To Date</label>
+              <input
+                type="date"
+                id="to-date"
+                class="border border-gray-300 rounded px-4 py-2"
+              />
+            </div>
+            <div class="flex flex-col w-full md:w-1/5">
+              <label for="rooms" class="text-gray-600 text-center">Rooms</label>
+              <input
+                type="number"
+                id="rooms"
+                placeholder="Rooms"
+                class="border border-gray-300 rounded px-4 py-2"
+              />
+            </div>
+            <div class="flex flex-col w-full md:w-1/5">
+              <label for="guests" class="text-gray-600 text-center"
+                >Guests</label
+              >
+              <input
+                type="number"
+                id="guests"
+                placeholder="Guests"
+                class="border border-gray-300 rounded px-4 py-2"
+              />
+            </div>
+            <button
+              class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 mt-6 md:mt-0"
+              id="search"
+              type="submit"
+            >
+              Search
+            </button>
+          </div>
+        </div>
+        </form>
+      </section>
+
+      <!-- Discount Ads Section -->
+      <section class="py-8 mx-16">
+        <div class="container mx-auto px-4">
+          <div class="bg-white rounded shadow-md overflow-hidden w-full">
+            <img
+              src="https://source.unsplash.com/random/800x600?discount"
+              alt="Discount Ad"
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-4 bg-transparent text-center">
+              <h3 class="text-xl font-bold text-gray-800">Summer Sale</h3>
+              <p class="text-gray-600">
+                Get up to 30% off on all rooms booked this summer.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- About Us Section -->
+      <section class="py-8 bg-gray-200" id="aboutUs">
+        <div class="container mx-auto px-4">
+          <h2 class="text-3xl font-bold text-gray-800 mb-4">About Us</h2>
+          <p class="text-gray-600">
+            HotelName offers the finest hospitality with luxurious amenities and
+            world-class service. Located in the heart of the city, we provide
+            the perfect getaway for both business and leisure travelers.
+          </p>
+        </div>
+      </section>
+      <br />
+      <!-- Contact Section -->
+      <section class="py-8 bg-gray-200" id="contact">
+        <div class="container mx-auto px-4">
+          <h2 class="text-3xl font-bold text-gray-800 mb-4">Contact</h2>
+          <p class="text-gray-600">Contact section here.</p>
+        </div>
+      </section>
+    </main>
+    
+    <!-- Hotel list container -->
+    <main
+      id="hotels-list-container"
+      class="bg-white p-8 rounded-lg shadow-lg w-full hidden"
+    >
+      <h2 class="text-2xl font-bold text-center mb-4">Hotels List</h2>
+      <ul id="hotels-list" class="space-y-4"></ul>
+      <button
+        id="back-button"
+        class="w-1/6 bg-red-500 text-white p-2 rounded-md mt-4 ml-1/2"
+      >
+        Back
+      </button>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white py-6">
+      <div class="container mx-auto px-4 text-center">
+        <p class="text-gray-600">&copy; 2024 HotelName. All rights reserved.</p>
+        <div class="mt-4 space-x-4">
+          <a href="#" class="text-gray-600 hover:text-gray-800">Facebook</a>
+          <a href="#" class="text-gray-600 hover:text-gray-800">Twitter</a>
+          <a href="#" class="text-gray-600 hover:text-gray-800">Instagram</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
