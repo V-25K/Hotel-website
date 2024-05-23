@@ -95,7 +95,7 @@ function populateHotelsList() {
 const priceFilter = document.getElementById("priceFilter");
 const price = document.getElementById("filter-price");
 
-price.addEventListener("change", () => {
+price.addEventListener("input", () => {
   const priceValue = price.value;
   priceFilter.textContent = `₹ ${priceValue}`;
 })
