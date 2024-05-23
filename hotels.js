@@ -79,13 +79,23 @@ function populateHotelsList() {
                       <img src=${hotel.images[3]} alt="${hotel.name} profile" class="w-14 h-20 object-cover border-2 border-red-400">
                     </div>
                 </div>
-                <div class="w-1/3">
-                    <h1 class="text-xl font-bold">${hotel.name}</h1>
-                    <p>Location: ${hotel.address} - ${hotel["pin code"]}</p>
-                    <p>Rating: ${hotel.rating}</p>
+                <div class="w-1/2">
+                    <h1 class="text-3xl font-bold">${hotel.name}</h1>
+                    <p class="text-l"><strong>Location:</strong> ${hotel.address} - ${hotel["pin code"]}</p>
+                    <p class="text-l"><strong>Rating:</strong> ${hotel.rating}</p>
                 </div>
             </div>
         `;
     hotelsList.appendChild(listItem);
   });
 }
+
+/*filter*/
+
+const priceFilter = document.getElementById("priceFilter");
+const price = document.getElementById("filter-price");
+
+price.addEventListener("change", () => {
+  const priceValue = price.value;
+  priceFilter.textContent = `₹ ${priceValue}`;
+})
