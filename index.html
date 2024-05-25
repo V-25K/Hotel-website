@@ -19,7 +19,9 @@
         <a href="#home" class="text-gray-600 hover:text-gray-800 hover:underline">Home</a>
         <a href="#aboutUs" class="text-gray-600 hover:text-gray-800 hover:underline">About Us</a>
         <a href="#contact" class="text-gray-600 hover:text-gray-800 hover:underline">Contact</a>
-        <a href="./loginAndSignup.html" class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600">Login /
+        <a href="./listYourProperty.html" class="text-white bg-green-800 hover:bg-green-600 p-2 rounded">List your
+          Property</a>
+        <a href="./loginAndSignup.html" class="bg-green-800 text-white px-4 py-2 rounded hover:bg-green-600">Login /
           Signup</a>
       </nav>
     </div>
@@ -89,36 +91,27 @@
     <section class="py-12 bg-gray-100" id="aboutUs">
       <div class="container mx-auto px-8 md:px-16">
         <h2 class="text-4xl font-bold text-gray-900 mb-6 text-center">About Us</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-          <div class="space-y-6">
-            <h3 class="text-2xl font-semibold text-gray-800">Our Mission</h3>
-            <p class="text-gray-700 leading-relaxed">
-              At <span class="font-bold text-blue-600">HotelBooking</span>, our mission is to provide travelers with the most efficient and user-friendly platform for finding and booking the perfect accommodations. We strive to offer the best prices, the most comprehensive listings, and an unparalleled booking experience.
-            </p>
-            <h3 class="text-2xl font-semibold text-gray-800">Why Choose Us?</h3>
-            <ul class="list-disc list-inside text-gray-700 space-y-2">
-              <li><span class="font-bold">Best Price Guarantee:</span> We offer the most competitive prices on the market.</li>
-              <li><span class="font-bold">Comprehensive Listings:</span> Our platform includes a wide range of hotels, from budget to luxury.</li>
-              <li><span class="font-bold">User-Friendly Interface:</span> Our website and mobile app are designed to provide a seamless booking experience.</li>
-              <li><span class="font-bold">24/7 Customer Support:</span> We are always here to assist you with your booking needs.</li>
-            </ul>
-          </div>
-          <div class="space-y-6">
-            <h3 class="text-2xl font-semibold text-gray-800">Our Story</h3>
-            <p class="text-gray-700 leading-relaxed">
-              Founded in 2024, <span class="font-bold text-blue-600">HotelBooking</span> was created by a group of passionate travelers who recognized the need for a more intuitive and comprehensive hotel booking platform. Since then, we have grown into one of the leading hotel booking services, trusted by millions of users worldwide.
-            </p>
-            <h3 class="text-2xl font-semibold text-gray-800">Our Values</h3>
-            <ul class="list-disc list-inside text-gray-700 space-y-2">
-              <li><span class="font-bold">Customer Satisfaction:</span> We prioritize our customers' needs and work tirelessly to meet their expectations.</li>
-              <li><span class="font-bold">Integrity:</span> We conduct our business with the highest ethical standards.</li>
-              <li><span class="font-bold">Innovation:</span> We continuously improve our platform to stay ahead of industry trends.</li>
-              <li><span class="font-bold">Sustainability:</span> We are committed to promoting sustainable tourism practices.</li>
-            </ul>
-          </div>
+        <div class="space-y-6 flex flex-col justify-center items-center">
+          <h3 class="text-2xl font-semibold text-gray-800">Our Mission</h3>
+          <p class="text-gray-700 leading-relaxed">
+            At <span class="font-bold text-blue-600">HotelBooking</span>, our mission is to provide travelers with the
+            most efficient and user-friendly platform for finding and booking the perfect accommodations. We strive to
+            offer the best prices, the most comprehensive listings, and an unparalleled booking experience.
+          </p>
+          <h3 class="text-2xl font-semibold text-gray-800">Why Choose Us?</h3>
+          <ul class="list-disc list-inside text-gray-700 space-y-2">
+            <li><span class="font-bold">Best Price Guarantee:</span> We offer the most competitive prices on the market.
+            </li>
+            <li><span class="font-bold">Comprehensive Listings:</span> Our platform includes a wide range of hotels,
+              from budget to luxury.</li>
+            <li><span class="font-bold">User-Friendly Interface:</span> Our website and mobile app are designed to
+              provide a seamless booking experience.</li>
+            <li><span class="font-bold">24/7 Customer Support:</span> We are always here to assist you with your booking
+              needs.</li>
+          </ul>
         </div>
       </div>
-    </section>    
+    </section>
 
     <br />
 
@@ -211,12 +204,12 @@
           <div class="mx-4 flex">
             <label for="hotels" class="block text-sm font-medium text-gray-700 w-2/3">Hotels</label>
             <input id="hotels" type="radio" class="mt-1 block w-full p-2 border border-gray-300 rounded-md"
-              name="accommodation" value="hotel"/>
+              name="accommodation" value="hotel" />
           </div>
           <div class="mx-4 flex">
             <label for="homeStays" class="block text-sm font-medium text-gray-700 w-2/3">Home Stay</label>
             <input id="homeStays" type="radio" class="mt-1 block w-full p-2 border border-gray-300 rounded-md"
-              name="accommodation" value="homestay"/>
+              name="accommodation" value="homestay" />
           </div>
         </div>
         <button id="apply-filters" class="w-full bg-blue-500 text-white p-2 rounded-md">
@@ -227,7 +220,7 @@
     <div class="w-3/4 p-4 ml-auto overflow-y-auto flex flex-col justify-center align-middle">
       <ul id="hotels-list" class="space-y-4"></ul>
       <button id="back-button" class="w-1/6 bg-red-500 text-white p-2 rounded-md mt-4 mx-auto">
-          Back
+        Back
       </button>
     </div>
   </main>
@@ -247,4 +240,5 @@
 
 <script src="https://web3forms.com/client/script.js" async defer></script>
 <script defer src="./hotels.js"></script>
+
 </html>

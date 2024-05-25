@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List Your Property</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+    <!-- Header -->
+  <header class="bg-white shadow fixed top-0 right-0 w-full z-10">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+      <div class="text-xl font-bold text-gray-800">HotelName</div>
+      <nav class="space-x-4">
+        <a href="#home" class="text-gray-600 hover:text-gray-800 hover:underline">Home</a>
+        <a href="#aboutUs" class="text-gray-600 hover:text-gray-800 hover:underline">About Us</a>
+        <a href="#contact" class="text-gray-600 hover:text-gray-800 hover:underline">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-10">
+        <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="property-name">
+                    Property Name
+                </label>
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="property-name" type="text" placeholder="Property Name">
+            </div>
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="property-address">
+                    Property Address
+                </label>
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="property-address" type="text" placeholder="Property Address">
+            </div>
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="owner-name">
+                    Owner's Name
+                </label>
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="owner-name" type="text" placeholder="Owner's Name">
+            </div>
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="owner-email">
+                    Owner's Email
+                </label>
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="owner-email" type="email" placeholder="Owner's Email">
+            </div>
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="owner-phone">
+                    Owner's Phone Number
+                </label>
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="owner-phone" type="text" placeholder="Owner's Phone Number">
+            </div>
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="property-type">
+                    Property Type
+                </label>
+                <div class="relative">
+                    <select class="block appearance-none w-full bg-white border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline" id="property-type">
+                        <option>Hotel</option>
+                        <option>Bed & Breakfast</option>
+                        <option>Hostel</option>
+                        <option>Apartment</option>
+                    </select>
+                    <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                        <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M7 10l5 5 5-5H7z"/></svg>
+                    </div>
+                </div>
+            </div>
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="number-of-rooms">
+                    Number of Rooms
+                </label>
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="number-of-rooms" type="number" placeholder="Number of Rooms">
+            </div>
+            <div class="mb-6">
+                <label class="block text-gray-700 text-sm font-bold mb-2">
+                    Amenities
+                </label>
+                <div class="flex items-center">
+                    <input id="wifi" type="checkbox" class="mr-2 leading-tight">
+                    <label for="wifi" class="text-gray-700 text-sm">WiFi</label>
+                </div>
+                <div class="flex items-center">
+                    <input id="pool" type="checkbox" class="mr-2 leading-tight">
+                    <label for="pool" class="text-gray-700 text-sm">Swimming Pool</label>
+                </div>
+                <div class="flex items-center">
+                    <input id="parking" type="checkbox" class="mr-2 leading-tight">
+                    <label for="parking" class="text-gray-700 text-sm">Parking</label>
+                </div>
+                <div class="flex items-center">
+                    <input id="gym" type="checkbox" class="mr-2 leading-tight">
+                    <label for="gym" class="text-gray-700 text-sm">Gym</label>
+                </div>
+            </div>
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="description">
+                    Description
+                </label>
+                <textarea class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="description" placeholder="Describe your property"></textarea>
+            </div>
+            <div class="flex items-center justify-between">
+                <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
+                    Submit
+                </button>
+            </div>
+        </form>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white shadow mt-10">
+        <div class="container mx-auto px-4 py-6 flex justify-between items-center">
+            <p class="text-gray-800">&copy; 2024 HotelBooking. All rights reserved.</p>
+            <nav>
+                <a href="#" class="text-gray-800 hover:text-gray-600 mx-2">Privacy Policy</a>
+                <a href="#" class="text-gray-800 hover:text-gray-600 mx-2">Terms of Service</a>
+            </nav>
+        </div>
+    </footer>
+
+    <!-- Tailwind CSS Animations -->
+    <style>
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .fade-in {
+            animation: fadeIn 2s ease-in-out;
+        }
+    </style>
+</body>
+</html>
