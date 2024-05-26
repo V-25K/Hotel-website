@@ -139,8 +139,8 @@ function populateHotelsList(type, price, rating) {
               <p class="text-md text-gray-600 mb-11"><strong>Amenities:</strong> ${hotel.amenities.join(
                 ", "
               )}</p>
-              <button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 mt-4">Visit</button>
-              <button class="bg-green-500 text-white px-4 mx-4 py-2 rounded hover:bg-green-600 mt-4">Book Now</button>
+              <a href="./hotelDetail.html" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 mt-4">Visit</a>
+              <a href="" class="bg-green-500 text-white px-4 mx-4 py-2 rounded hover:bg-green-600 mt-4">Book Now</a>
             </div>
           </div>
         </div>
